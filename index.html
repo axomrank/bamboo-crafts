@@ -1,0 +1,158 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Bansh — Handmade Bamboo Jewellery & Objects</title>
+<meta name="description" content="Handmade bamboo jewellery, lighting and home objects. Split, woven and finished by hand.">
+<meta name="theme-color" content="#f3efe6">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Inter+Tight:wght@300;400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' fill='%23f3efe6'/%3E%3Cpath d='M16 3v26M10 11h12M10 21h12' stroke='%231c1a16' stroke-width='2'/%3E%3C/svg%3E">
+</head>
+<body>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false"><defs>
+<g id="leaf"><path d="M0 0C28-16 84-14 118 0 84 14 28 16 0 0Z"/><path d="M4 0H108" stroke="rgba(255,255,255,.35)" stroke-width="1.4" fill="none"/></g>
+<g id="sprig"><path d="M296 8C226 40 126 92 28 206" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"/>
+<use href="#leaf" transform="translate(262 26) rotate(118) scale(0.8)"/>
+<use href="#leaf" transform="translate(240 38) rotate(190) scale(0.75)"/>
+<use href="#leaf" transform="translate(205 57) rotate(112) scale(1)"/>
+<use href="#leaf" transform="translate(180 70) rotate(186) scale(0.95)"/>
+<use href="#leaf" transform="translate(150 88) rotate(116) scale(1)"/>
+<use href="#leaf" transform="translate(125 104) rotate(190) scale(0.95)"/>
+<use href="#leaf" transform="translate(95 128) rotate(114) scale(0.9)"/>
+<use href="#leaf" transform="translate(75 150) rotate(188) scale(0.85)"/>
+<use href="#leaf" transform="translate(52 178) rotate(118) scale(0.7)"/>
+<use href="#leaf" transform="translate(34 200) rotate(192) scale(0.6)"/>
+<use href="#leaf" transform="translate(26 208) rotate(150) scale(0.6)"/></g></defs></svg>
+<!-- soft leaf shadows falling across the page -->
+<div class="shade shade-a" aria-hidden="true"><svg viewBox="0 0 320 240"><use href="#sprig"/></svg></div>
+<div class="shade shade-b" aria-hidden="true"><svg viewBox="0 0 320 240"><use href="#sprig"/></svg></div>
+<div class="shade shade-c" aria-hidden="true"><svg viewBox="0 0 320 240"><use href="#sprig"/></svg></div>
+
+<!-- Bamboo culm: a vertical stalk whose nodes mark the sections -->
+<nav class="culm" aria-label="Sections">
+  <a href="#top" data-node="top"><span>Home</span></a>
+  <a href="#collections" data-node="collections"><span>Collections</span></a>
+  <a href="#gallery" data-node="gallery"><span>Gallery</span></a>
+  <a href="#craft" data-node="craft"><span>Craft</span></a>
+  <a href="#contact" data-node="contact"><span>Contact</span></a>
+</nav>
+
+<header class="bar">
+  <a class="brand" href="#top">Bansh</a>
+  <nav class="bar-links" aria-label="Main">
+    <a href="#gallery">Gallery</a>
+    <a href="#craft">Craft</a>
+    <a href="#contact">Contact</a>
+    <span class="shop-pill" title="Online shop opening soon">Shop · soon</span>
+  </nav>
+</header>
+
+<main id="top">
+
+  <!-- HERO -->
+  <section class="hero" data-section="top">
+    <div class="stalks" aria-hidden="true">
+      <i class="stalk" style="left:47%;--w:14px;--seg:150px;top:-40px;bottom:-40px"></i>
+      <i class="stalk" style="right:2.5%;--w:30px;--seg:230px;top:-60px;bottom:-60px"></i>
+      <i class="stalk" style="right:7%;--w:18px;--seg:170px;top:-20px;bottom:-80px;opacity:.9"></i>
+    </div>
+    <svg class="hero-leaf" viewBox="0 0 320 240" aria-hidden="true"><use href="#sprig"/></svg>
+    <div class="hero-text">
+      <p class="eyebrow">Handmade in bamboo</p>
+      <h1>Split, woven,<br><em>worn.</em></h1>
+      <p class="lede">Jewellery, lamps and small objects made from a single quiet material, finished entirely by hand.</p>
+      <a class="link-arrow" href="#gallery">View the gallery <span aria-hidden="true">→</span></a>
+    </div>
+    <figure class="hero-img">
+      <img src="img/nec-12.webp" width="1254" height="1254" alt="Bamboo swan pendant necklace with red and ivory beads" fetchpriority="high">
+      <figcaption>Swan Pendant Necklace</figcaption>
+    </figure>
+  </section>
+
+  <!-- COLLECTIONS INDEX -->
+  <section id="collections" class="collections" data-section="collections">
+    <header class="sec-head">
+      <span class="num">01</span>
+      <h2>Collections</h2>
+    </header>
+    <ul class="index" id="index"></ul>
+    <div class="index-preview" id="indexPreview" aria-hidden="true"><img alt=""></div>
+  </section>
+
+  <!-- GALLERY -->
+  <section id="gallery" class="gallery" data-section="gallery">
+    <header class="sec-head">
+      <span class="num">02</span>
+      <h2>Gallery</h2>
+      <div class="filters" id="filters" role="tablist" aria-label="Filter gallery"></div>
+    </header>
+    <div class="grid" id="grid"></div>
+  </section>
+
+  <!-- CRAFT -->
+  <section id="craft" class="craft" data-section="craft">
+    <div class="stalks" aria-hidden="true">
+      <i class="stalk" style="right:4%;--w:22px;--seg:200px;top:-40px;bottom:-40px"></i>
+      <i class="stalk" style="right:9%;--w:14px;--seg:150px;top:-40px;bottom:-40px;opacity:.85"></i>
+    </div>
+    <header class="sec-head">
+      <span class="num">03</span>
+      <h2>Craft</h2>
+    </header>
+    <div class="craft-body">
+      <p class="big">Bamboo is cut, split into fine strips, and shaped without hurry — woven into lattices, rolled into beads, cut into petals.</p>
+      <ul class="facts">
+        <li><b>One material</b><span>Bamboo, left in its natural colour, with accents of red, ebony and ivory.</span></li>
+        <li><b>By hand</b><span>Every weave, bead and petal is cut and assembled individually.</span></li>
+        <li><b>Made to last</b><span>Light on the body, warm in the home, and unlike anything mass-produced.</span></li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section id="contact" class="contact" data-section="contact">
+    <svg class="contact-leaf" viewBox="0 0 320 240" aria-hidden="true"><use href="#sprig"/></svg>
+    <header class="sec-head">
+      <span class="num">04</span>
+      <h2>Contact</h2>
+    </header>
+    <div class="contact-body">
+      <p class="big">The online shop is on its way. Until then, ask us about any piece you see.</p>
+      <!-- TODO: replace with the real email / WhatsApp / Instagram -->
+      <a class="btn" href="mailto:hello@example.com">hello@example.com</a>
+    </div>
+  </section>
+</main>
+
+<footer class="foot">
+  <span>© <span id="year"></span> Bansh</span>
+  <span>Handmade bamboo</span>
+  <a href="#top">Back to top ↑</a>
+</footer>
+
+<!-- LIGHTBOX -->
+<div class="lb" id="lb" role="dialog" aria-modal="true" aria-label="Image viewer" hidden>
+  <button class="lb-x" id="lbClose" aria-label="Close">✕</button>
+  <button class="lb-nav prev" id="lbPrev" aria-label="Previous">←</button>
+  <button class="lb-nav next" id="lbNext" aria-label="Next">→</button>
+  <figure class="lb-fig">
+    <img id="lbImg" alt="">
+    <figcaption>
+      <div>
+        <h3 id="lbTitle"></h3>
+        <p id="lbMeta"></p>
+      </div>
+      <!-- Buying options plug in here later (price, add to cart) -->
+      <div class="lb-buy" id="lbBuy"><span class="soon">Available soon</span></div>
+    </figcaption>
+  </figure>
+</div>
+
+<script src="js/products.js"></script>
+<script src="js/app.js"></script>
+</body>
+</html>
