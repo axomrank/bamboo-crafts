@@ -10,12 +10,12 @@
   --serif:'Instrument Serif',Georgia,'Times New Roman',serif;
   --sans:'Inter Tight','Helvetica Neue',Arial,sans-serif;
   --gutter:clamp(20px,5vw,72px);
-  --culm:56px;
+  --culm:0px;
   color-scheme:light;
 }
 *{box-sizing:border-box;margin:0;padding:0}
 html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
-body{background:var(--paper) repeating-linear-gradient(90deg,rgba(120,105,60,.045) 0 1px,transparent 1px 9px);color:var(--ink);font:300 17px/1.6 var(--sans);-webkit-font-smoothing:antialiased;overflow-x:hidden}
+body{background:var(--paper);color:var(--ink);font:300 17px/1.6 var(--sans);-webkit-font-smoothing:antialiased;overflow-x:hidden}
 img{display:block;max-width:100%;height:auto}
 a{color:inherit;text-decoration:none}
 ul{list-style:none}
@@ -34,7 +34,7 @@ button{font:inherit;color:inherit;background:none;border:0;cursor:pointer}
 .culm a:hover span,.culm a:focus-visible span{opacity:1;transform:none}
 
 /* ---------- top bar ---------- */
-.bar{position:fixed;top:0;left:0;right:0;z-index:15;display:flex;justify-content:space-between;align-items:center;padding:20px var(--gutter) 20px calc(var(--culm) + 24px);background:linear-gradient(var(--paper) 55%,transparent);}
+.bar{position:fixed;top:0;left:0;right:0;z-index:15;display:flex;justify-content:space-between;align-items:center;padding:20px var(--gutter);background:linear-gradient(var(--paper) 55%,transparent);}
 .brand{font:400 30px/1 var(--serif);letter-spacing:.01em}
 .bar-links{display:flex;gap:28px;align-items:center;font-size:14px;letter-spacing:.04em}
 .bar-links a{position:relative}
@@ -162,7 +162,7 @@ section+section::before{content:"";position:absolute;top:0;left:var(--gutter);ri
 .contact::before{opacity:.6}
 
 /* real leaves, overhanging the hero */
-.hero-leaf{position:absolute;top:56px;right:-2%;width:min(48vw,560px);color:var(--leaf);fill:var(--leaf);overflow:visible;z-index:0;pointer-events:none;
+.hero-leaf{position:absolute;top:48px;right:-3%;width:min(36vw,440px);color:var(--leaf);fill:var(--leaf);overflow:visible;z-index:3;pointer-events:none;
   filter:drop-shadow(14px 22px 12px rgba(40,45,20,.28));transform-origin:100% 0;animation:sway 9s ease-in-out infinite}
 .contact{overflow:hidden}
 .contact-leaf{position:absolute;right:-4%;bottom:-6%;width:min(52vw,600px);color:#4d6136;fill:#4d6136;opacity:.8;transform:scale(-1,-1);overflow:visible;pointer-events:none}
