@@ -68,6 +68,9 @@
       const im = b.querySelector('img');
       const ok = () => im.classList.add('ok');
       if (im.complete && im.naturalWidth) ok(); else { im.onload = ok; im.onerror = ok; }
+      b.addEventListener('touchstart', () => {
+        b.classList.add('touched'); setTimeout(() => b.classList.remove('touched'), 1500);
+      }, { passive: true });
       grid.append(b);
     });
     filters.querySelectorAll('button').forEach(b => b.setAttribute('aria-selected', b.dataset.f === filter));
